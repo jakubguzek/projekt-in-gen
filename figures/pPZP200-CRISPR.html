@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <script src='angularplasmid.complete.min.js'></script>
+   </head>
+    <body>
+	<style>
+        @import url("http://fonts.googleapis.com/css?family=Lato:300,400,700|Donegal+One|Source+Code+Pro:400");
+		body {font-family: 'Lato'; font-weight: 400;}
+		.boundary {stroke-dasharray: 2,2;stroke-width: 2px}
+		.mdlabel {font-size: 12px}
+		.smlabel {font-size: 8px}
+		.navy {fill:#037c95}
+        .labelline {stroke:#333;stroke-width:1.5px;}
+		.darkblue {fill:#112650}
+		.sea {fill:#70ada4}
+		.orange {fill:#f26c3c}
+		.lightorange {fill: #f8a76d}
+		.beige {fill: #fbdcb2}
+		.red {fill: #ee3e27}
+        .white {fill:#fff}
+	</style>
+	<plasmid id='pPZP200-AtU6-26-sgRNA-2x35S-Cas9' sequencelength='11794' plasmidheight="375" plasmidwidth="375">
+		<plasmidtrack trackstyle="fill:#ccc" width="5" radius="120"></plasmidtrack>
+		<plasmidtrack trackstyle="fill:rgba(225,225,225,0.5)" radius="110">
+			<!-- main labels -->
+			<tracklabel text="pPZP200"	labelstyle="font-size:20px; font-weight:400" vadjust="-10"></tracklabel>
+            <tracklabel text="CRISPR/Cas9"	labelstyle="font-size:20px; font-weight:400" vadjust="10"></tracklabel>
+			<tracklabel text="11794 bp" labelstyle="font-size:10px" vadjust="30"></tracklabel>
+
+			<!-- main markers and labels -->
+			<trackmarker start='11630' end='6594' markerstyle='fill:#037c95e6' arrowendlength="4" arrowstartlength="-4">
+				<markerlabel type="path" text='pPZP200' class="mdlabel white"></markerlabel>
+			</trackmarker>
+            <trackmarker start="6594" end="6745" markerstyle="fill:#112650e9">
+                <markerlabel text="AtU6-26" vadjust="-40" valign="inner" class="mdlabel darkblue" showline="1" linevadjust="10" lineclass="labelline"></markerlabel>
+            </trackmarker>
+			<trackmarker start='6745' end='6845' markerstyle="fill:#f26c3ce6" >
+                <markerlabel text="sgRNA" vadjust="50" valign="outer" class="mdlabel orange" showline="1" linevadjust="-15" lineclass="labelline"></markerlabel>
+			</trackmarker>
+            <trackmarker start="6845" end="7190" markerstyle="fill:#f8a76de6">
+                <markerlabel text="2 x 35S" vadjust="40" valign="outer" class="mdlabel lightorange" showline="1" linevadjust="-15" lineclass="labelline"></markerlabel>
+            </trackmarker>
+            <trackmarker start="7372" end="7438" markerstyle="fill:#ee3e27e6">
+                <markerlabel text="3 x flag" vadjust="-50" valign="inner" class="mdlabel red" showline="1" linevadjust="10" lineclass="labelline"></markerlabel>
+            </trackmarker>
+            <trackmarker start="7438" end="7483" markerstyle="fill:#fbdcb2e6">
+                <markerlabel text="NLS" vadjust="-25" valign="inner" hadjust="4" class="mdlabel beige" showline="1" linevadjust="10" lineclass="labelline"></markerlabel>
+            </trackmarker>
+			<trackmarker start='7483' end='11583' markerstyle="fill:#70ada4e6" arrowendlength="4" arrowstartlength="-4">
+                <markerlabel type="path" text='hSbCas9' class="mdlabel white"></markerlabel>
+			</trackmarker>
+            <trackmarker start="11583" end="11638" markerstyle="fill:#fbdcb2e6">
+                <markerlabel text="NLS" vadjust="-30" valign="inner" hadjust="-3" class="mdlabel beige" showline="1" linevadjust="10" lineclass="labelline"></markerlabel>
+            </trackmarker>
+
+            <!-- draw the marker regions -->
+<!--
+            <trackmarker start='6594' end='6745' markerstyle="fill:rgba(238,221,255,0.6)" wadjust="-5" vadjust="15"></trackmarker>
+            <trackmarker start='6745' end='6772' markerstyle="fill:rgba(221,238,255,0.6)" wadjust="-5" vadjust="15"></trackmarker>
+            <trackmarker sstart='6772' end='6845' markerstyle="fill:rgba(238,255,221,0.6)" wadjust="-5" vadjust="15"></trackmarker>
+            <trackmarker start='6845' end='7190' markerstyle="fill:rgba(255,238,221,0.6)" wadjust="-5" vadjust="15"></trackmarker>
+            <trackmarker start='7372' end='7438' markerstyle="fill:rgba(255,238,221,0.6)" wadjust="-5" vadjust="15"></trackmarker>
+            <trackmarker start='7438' end='7483' markerstyle="fill:rgba(255,238,221,0.6)" wadjust="-5" vadjust="15"></trackmarker>
+            <trackmarker start='11583' end='11630' markerstyle="fill:rgba(255,238,221,0.6)" wadjust="-5" vadjust="15"></trackmarker> -->
+            <trackmarker start='11638' end='6594' markerstyle="fill:#037c9577" wadjust="-5" vadjust="25"></trackmarker>
+            <trackmarker start='7483' end='11583' markerstyle="fill:#70ada477" wadjust="-5" vadjust="25"></trackmarker>
+
+            <!-- draw the region boundaries lines for each marker -->
+            <!-- pPZP200 -->
+            <trackmarker start="11630" markerstyle="stroke:#037c9599" class="boundary" wadjust="20">
+                <markerlabel type="path" class="smlabel navy" text="11638" vadjust="40"></markerlabel>
+            </trackmarker>
+            <trackmarker start="6594" markerstyle="stroke:#037c9599" class="boundary" wadjust="20">
+                <markerlabel type="path" class="smlabel navy" text="6594" vadjust="30"></markerlabel>
+            </trackmarker>
+
+            <!-- hSbCas9 -->
+            <trackmarker start="7483" markerstyle="stroke:#70ada499" class="boundary" wadjust="20">
+                <markerlabel type="path" class="smlabel sea" text="7483" vadjust="30"></markerlabel>
+            </trackmarker>
+            <trackmarker start="11583" markerstyle="stroke:#70ada499" class="boundary" wadjust="20">
+                <markerlabel type="path" class="smlabel sea" text="11583" wadjust="20" vadjust="30"></markerlabel>
+            </trackmarker>
+
+			<trackscale interval="100" style='stroke:#999' direction="in" ticksize="3"></trackscale>
+            <trackscale interval="100" style='stroke:#999' ticksize="3"></trackscale>
+            <trackscale interval="1000" style="stroke:#f00" direction="in" showlabels="1" labelstyle="fill:#999;stroke:none;text-anchor:middle;alignment-baseline:middle;font-size:10px"></trackscale>
+		</plasmidtrack>
+	</plasmid>
+    </body>
+</html>
